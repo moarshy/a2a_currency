@@ -3,8 +3,8 @@ import os
 
 import click
 
-from agents.langgraph.agent import CurrencyAgent
-from agents.langgraph.task_manager import AgentTaskManager
+from currency_agent.agent import CurrencyAgent
+from currency_agent.task_manager import AgentTaskManager
 from common.server import A2AServer
 from common.types import (
     AgentCapabilities,

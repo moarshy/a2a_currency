@@ -4,7 +4,7 @@ import traceback
 
 from collections.abc import AsyncIterable
 
-from agents.langgraph.agent import CurrencyAgent
+from currency_agent.agent import CurrencyAgent
 from common.server import utils
 from common.server.task_manager import InMemoryTaskManager
 from common.types import (
