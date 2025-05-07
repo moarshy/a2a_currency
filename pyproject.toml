@@ -1,0 +1,29 @@
+[project]
+name = "currency_agent"
+version = "0.1.0"
+description = "Currency agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain-google-genai>=2.0.10",
+    "langgraph>=0.3.18",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.1.0",
+    "google-genai>=1.9.0",
+    "a2a-samples @ git+https://github.com/google/A2A.git@main#subdirectory=samples/python",
+]
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+serve_a2a = "currency_agent.__main__:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+include = [ "currency_agent" ]
+exclude = [ "__pycache__", "*.pyc", ".pytest_cache", ".ruff_cache",]
